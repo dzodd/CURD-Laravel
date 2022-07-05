@@ -8,10 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class post extends Model
 {
     use HasFactory;
-    public function categories()
-    {
-        return $this->belongsTo('App\Models\Categories','cate_id');
-    }
+
     public function users()
     {
         return $this->belongsTo('App\Models\user','user_id');

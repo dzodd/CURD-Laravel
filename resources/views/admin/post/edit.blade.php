@@ -82,12 +82,7 @@
                                                     @endforeach
                                                 </select>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="Author"> Author</label>
-                                                <input type="text" name="tacgia" class="form-control" placeholder="" value="{{ $post->tacgia }}" />
 
-
-                                            </div>
 
                                         </div>
                                     </div>

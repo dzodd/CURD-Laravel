@@ -22,8 +22,7 @@
 
     <link rel="stylesheet" href="{{ asset('backend/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('backend/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+    <link rel="stylesheet"href="{{ asset('backend/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
     <!-- summernote -->js
     <link rel="stylesheet" href="{{ asset('backend/plugins/summernote/summernote-bs4.min.css') }}">
 </head>
@@ -80,10 +79,7 @@
 
                 <!-- Messages Dropdown Menu -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link" data-toggle="dropdown" href="#">
-                        <i class="far fa-comments"></i>
-                        <span class="badge badge-danger navbar-badge">3</span>
-                    </a>
+
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
@@ -143,42 +139,9 @@
                     </div>
                 </li>
                 <!-- Notifications Dropdown Menu -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link" data-toggle="dropdown" href="#">
-                        <i class="far fa-bell"></i>
-                        <span class="badge badge-warning navbar-badge">15</span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                        <span class="dropdown-item dropdown-header">15 Notifications</span>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-envelope mr-2"></i> 4 new messages
-                            <span class="float-right text-muted text-sm">3 mins</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-users mr-2"></i> 8 friend requests
-                            <span class="float-right text-muted text-sm">12 hours</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-file mr-2"></i> 3 new reports
-                            <span class="float-right text-muted text-sm">2 days</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-                        <i class="fas fa-expand-arrows-alt"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-                        <i class="fas fa-th-large"></i>
-                    </a>
-                </li>
+
+
+
             </ul>
         </nav>
         <!-- /.navbar -->
@@ -249,18 +212,12 @@
                                         <p>User</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('dashboard.category.index') }}"
-                                        class="nav-link  @if (Request::is('dashboard/Category')) active @endif">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Category Posts</p>
-                                    </a>
-                                </li>
+
                                 <li class="nav-item">
                                     <a href="{{ route('dashboard.kind.index') }}"
                                         class="nav-link   @if (Request::is('dashboard/kind')) active @endif">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Kinds of Post</p>
+                                        <p>Category     </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -271,12 +228,13 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('dashboard.comment.index') }}"
-                                        class="nav-link  @if (Request::is('dashboard/comment')) active @endif">
+                                    <a href="{{ route('dashboard.frontpage.index') }}"
+                                        class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Comment</p>
+                                        <p>USER PAGE</p>
                                     </a>
                                 </li>
+
                             </ul>
                         </li>
 
@@ -362,7 +320,7 @@
     <script src="{{ asset('backend/plugins/pdfmake/pdfmake.min.js') }}"></script>
     <script src="{{ asset('backend/plugins/pdfmake/vfs_fonts.js') }}"></script>
 
-    //
+
     <script src="{{ asset('backend/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('backend/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
     <script src="{{ asset('backend/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>

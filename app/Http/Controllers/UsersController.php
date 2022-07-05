@@ -111,7 +111,7 @@ class UsersController extends Controller
 
 
 
-       Auth::guest();
+
        session()->flush();
        return redirect('/');
     }

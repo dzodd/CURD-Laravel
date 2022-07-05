@@ -9,12 +9,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Kinds Management</h1>
+                        <h1 class="m-0">Category Management</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Kinds Management</li>
+                            <li class="breadcrumb-item active">Category Management</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -32,7 +32,7 @@
                 <div class="card-tools">
 
                     <a href="{{ route('dashboard.kind.create') }}" title="Create New"
-                        class="btn btn-block bg-gradient-success">Create Kinds</a>
+                        class="btn btn-block bg-gradient-success">Create Category</a>
                 </div>
 
             </div>
@@ -51,9 +51,8 @@
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Status</th>
-                                <th>Category ID</th>
-                                <th>Categories Name</th>
                                 <th>Action</th>
+
 
                             </tr>
                         </thead>
@@ -70,8 +69,7 @@
                                             <span class="badge badge-danger"> Disabled</span>
                                         @endif
                                     </td>
-                                    <td>{{ $kind->cate_id }}</td>
-                                    <td>{{ $kind->categories['cate_name'] }}</td>
+
                                     <td>
                                         <a href="{{ route('dashboard.kind.edit',$kind->id) }}" title="Edit" class="btn btn-success">Edit</a>
                                         <a href="{{ route('dashboard.kind.delete',$kind->id) }}" title="Delete" class="btn btn-danger">Delete</a>

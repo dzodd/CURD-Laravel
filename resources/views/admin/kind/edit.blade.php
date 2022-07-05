@@ -55,16 +55,7 @@
 
 
                             <div class="col-xs-12 col-sm-10 col-md-10">
-                                <div class="form-group">
-                                    <label for="category"> Category</label>
-                                 <select name="cate_id" id="" required="" class="form-control">
-                                     <option value="1" style="display:none">select Category</option>
-                                     @foreach ($categories as $cate )
-                                     <option value="{{ $cate->id }}" @if($cate->id==$kinds->cate_id)  selected="" @endif>{{ $cate->cate_name }}</option>
 
-                                     @endforeach
-                                 </select>
-                                </div>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6 col-md-6">
                                         <div class="form-group">

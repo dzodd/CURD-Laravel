@@ -25,7 +25,7 @@ $query_tongcmt = mysqli_query($conn, $sql_tongcmt);
 
 					<div class="content-media">
 						<div class="post-thumb">
-							<img src="images/tin/<?php echo $row_tin['image'] ?>">
+							<img src="../../../DzodNews/public/Backend/dist/img/upload/post/<?php echo $row_tin['image'] ?>">
 						</div>
 					</div>
 

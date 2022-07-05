@@ -49,8 +49,13 @@
                                         style="width: 150px; height:150px;backgroud:#eee ;position: relative;border-radius:100%">
                                         <img src="{{ asset('/backend/dist/img/upload/avatar.png') }}" alt=""
                                             style="width: 100%; height:100%;border-radius:100%;z-index:-1" id="output-image">
+
+
+                                    </div>
+                                    <div class="form-group">
                                         <input type="file" name="image" id="profile-img"
-                                            style="width:100%;height:100%;border-radius:100%;opacity:0">
+                                        style="width:100%;height:100%;;opacity:50%">
+
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-10 col-md-10">
@@ -74,18 +79,13 @@
                                                 <label for="category"> Category</label>
                                                 <select name="kind_id" id="" required="" class="form-control">
                                                     <option value="1" style="display:none">Select categories</option>
-                                                    @foreach ($kinds as $kind)
+                                                    @foreach ( $kinds as $kind)
                                                         <option value="{{ $kind->id }}">{{ $kind->name }}</option>
 
                                                     @endforeach
                                                 </select>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="Author"> Author</label>
-                                                <input type="text" name="tacgia" class="form-control" placeholder="Author" />
 
-
-                                            </div>
 
                                         </div>
                                     </div>

@@ -11,19 +11,17 @@ class kind extends Model
      protected $fillable = [
         'name','status'
     ];
-    public function categories()
-    {
-        return $this->belongsTo('App\Models\Categories','cate_id');
-    }
+
     public function post()
     {
-        return $this->hasMany('App\Models\post');
+
+        return $this->hasMany('App\Models\post' , 'kind_id' );
     }
      public static function boot() {
         parent::boot();
 
-        static::deleting(function($user) { // before delete() method call this
-             $user->photos()->delete();
+        static::deleting(function($kind) { // before delete() method call this
+             $kind->post()->delete();
              // do the rest of the cleanup...
         });
     }

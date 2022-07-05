@@ -9,18 +9,18 @@ $query_loaitin = mysqli_query($conn, $sql_loaitin);
 $row_loaitin = mysqli_fetch_array($query_nhomtin);
 
 $row_nhomtin = mysqli_fetch_array($query_nhomtin);
-$sql_tin = "SELECT * FROM posts,kinds,categories WHERE posts.kind_id=kinds.id and kinds.cate_id=categories.id and kinds.id='$_GET[id_loaitin]'";
+$sql_tin = "SELECT * FROM posts,kinds,categories WHERE posts.kind_id=kinds.id and kinds.cate_id=categories.id and kinds.id='$_GET[id]'";
 $query_tin = mysqli_query($conn, $sql_tin);
 ?>
 <!-- page header
    ================================================== -->
 <section id="page-header">
 	<div class="row current-cat">
-		<div class="col-full">
-<?php while($row_nhomtin = mysqli_fetch_array($query_nhomtin)){
+		<div class="col-full"> 
+<?php while($row_nhomtin = mysqli_fetch_array($query_nhomtin)){ 
 		?>
 		<h1>Danh mục: <?php echo $row_nhomtin['cate_name']?></h1>
-
+		
 	<?php }?>
 			<?php
 			while ($row_loaitin = mysqli_fetch_array($query_loaitin)) {
@@ -28,7 +28,7 @@ $query_tin = mysqli_query($conn, $sql_tin);
 				<div class="entry-text">
 					<div class="entry-meta">
 						<span class="cat-links">
-							<a href="index.php?manage=categories&id=<?php echo $row_loaitin['kind_id'] ?>&id_loaitin=<?php echo $row_loaitin['id'] ?>"><?php echo $row_loaitin['name'] ?></a>
+							<a href="index.php?manage=categories&id=<?php echo $row_loaitin['cate_id'] ?>&id_loaitin=<?php echo $row_loaitin['id'] ?>"><?php echo $row_loaitin['name'] ?></a>
 						</span>
 					</div>
 				</div>

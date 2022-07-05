@@ -27,7 +27,6 @@ class KindController extends Controller
      */
     public function create()
     {
-        $categories=categories::all();
         return view('admin.kind.create',compact('categories'));
     }
 
@@ -40,14 +39,14 @@ class KindController extends Controller
     public function store(Request $request)
     {
         $this-> validate($request,[
-            'cate_id'=>'required',
+
             'name'=>'required',
 
         ]);
         $kinds = new kind();
         $kinds->name= $request->name;
         $kinds->status=$request->status;
-        $kinds ->cate_id=$request->cate_id;
+
 
         if($kinds->save()){
             return redirect(route('dashboard.kind.index'));
@@ -75,7 +74,7 @@ class KindController extends Controller
      */
     public function edit( $id)
     {
-        $categories=category::all();
+
         $kinds  = kind::find($id);
 
         return view('admin.kind.edit',compact('kinds'),compact('categories'));
@@ -96,7 +95,7 @@ class KindController extends Controller
         $this->validate($request,[
 
             'name' => 'required',
-            'cate_id' => 'required',
+
 
 
         ]);
@@ -105,7 +104,7 @@ class KindController extends Controller
         $kinds ->name= $request->name;
 
         $kinds ->status= $request->status;
-        $kinds ->cate_id= $request->cate_id;
+
         if($kinds->save()){
             return redirect(route('dashboard.kind.index'));
         }else{

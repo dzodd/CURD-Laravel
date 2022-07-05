@@ -29,7 +29,7 @@ $query_tin2 = mysqli_query($conn, $sql_tin2);
 
 									<div class="featured-post-slide">
 
-										<div class="post-background" style="background-image:url('images/tin/<?php echo $row_tin['image'] ?>');"></div>
+										<div class="post-background" style="background-image:url('../../../DzodNews/public/Backend/dist/img/upload/post/<?php echo $row_tin['image'] ?>');"></div>
 
 										<div class="overlay"></div>
 
@@ -60,7 +60,7 @@ $query_tin2 = mysqli_query($conn, $sql_tin2);
 				
 				<div class="entry-thumb">
 					<a href="index.php?manage=news&id=<?php echo $row_tin1['postid'] ?>" class="thumb-link">
-						<img src="images/tin/<?php echo $row_tin1['image'] ?>" alt="building">
+						<img src="../../../DzodNews/public/Backend/dist/img/upload/post/<?php echo $row_tin1['image'] ?>" alt="building">
 					</a>
 				</div>
 

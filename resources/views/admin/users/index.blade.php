@@ -31,8 +31,6 @@
                 <h3 class="card-title">All Users</h3>
                 <div class="card-tools">
 
-                    <a href="{{ route('dashboard.users.create') }}" title="Create New"
-                        class="btn btn-block bg-gradient-success">Create New</a>
                 </div>
 
             </div>
@@ -74,7 +72,7 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{ route('dashboard.users.edit',$user->id) }}" title="Edit" class="btn btn-success">Edit</a>
+
                                     <a href="{{ route('dashboard.users.delete',$user->id) }}" title="Delete" class="btn btn-danger">Delete</a>
                                     <a href="{{ route('dashboard.users.show',$user->id) }}" title="Show" class="btn btn-warning">Show</a>
                                 </td>
@@ -94,7 +92,7 @@
             <!-- Main row -->
 
             <!-- /.row -->
-    </div>
+          </div>
 
 
     <!-- /.content -->

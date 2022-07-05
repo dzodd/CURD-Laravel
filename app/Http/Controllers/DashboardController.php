@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\post;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -12,8 +14,9 @@ class DashboardController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-            return view('admin.layout.dashboard');        }
+    {       $count = post::where('status','=','1')->count();
+            $user = User::where('status','=','1')->count();
+            return view('admin.layout.dashboard',compact('count'),compact('user'));      }
 
     /**
      * Show the form for creating a new resource.

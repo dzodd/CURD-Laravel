@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\categories;
+
 use App\Models\post;
 use App\Models\category;
 use App\Models\kind;
@@ -32,10 +32,10 @@ class PostController extends Controller
      */
     public function create()
     {
-        $categories=category::all();
+
         $kinds=kind::all();
         $users=user::all();
-        return view('admin.post.create',compact('kinds'),compact('users'),compact('categories'));
+        return view('admin.post.create',compact('kinds'),compact('users'));
     }
 
     /**
@@ -51,6 +51,17 @@ class PostController extends Controller
         {
             $filename=time() . '.' .$request->image->getClientOriginalName();
 
+        }
+        if (!isset($_FILES["image"]))
+        {
+            echo "Bạn chưa upload hình ảnh";
+
+            die;
+        }
+        if ($_FILES["image"]['error'] != 0)
+        {
+          $e= "Hình ảnh  upload bị lỗi";
+          die;
         }
         $request->validate([
 
@@ -71,7 +82,7 @@ class PostController extends Controller
         $post ->user_id= $user_id;
         $post ->status= $request->status;
         $post ->mota=$request->mota;
-        $post->tacgia=$request->tacgia;
+
 
             if(!empty($request->image))
             {
@@ -150,11 +161,11 @@ class PostController extends Controller
         $post ->title= $request->title;
         $post ->content= $request->content;
         $post ->kind_id=$request->kind_id;
-         $user_id= Auth::user()->id;
+        $user_id= Auth::user()->id;
         $post ->user_id= $user_id;
         $post ->status= $request->status;
         $post ->mota=$request->mota;
-        $post->tacgia=$request->tacgia;
+
         if (!empty($filename)){
             $file=$post->image;
 

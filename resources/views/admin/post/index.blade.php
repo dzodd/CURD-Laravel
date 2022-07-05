@@ -22,10 +22,10 @@
         </div>
 
         <!-- /.content-header -->
-        <section class="content">
+      <section class="content">
 
 
-            <!-- box Info -->
+                <!-- box Info -->
             <div class="card-header border-transparent">
 
                 <h3 class="card-title">All posts</h3>
@@ -36,13 +36,11 @@
                 </div>
 
             </div>
-            <!-- Main content -->
+            <!-- Main content -->z
 
 
             <!-- Info boxes -->
             <div class="card">
-
-
                 <div class="card-body p-0">
 
                     <table id="example" class="table table-bordered table-striped">
@@ -70,7 +68,7 @@
                                     <td>{{ $post->id }}</td>
                                     <td>{{ $post->title }}</td>
                                     <td>{{ $post->kinds['name']}}</td>
-                                    <td>{{ $post->tacgia}}</td>
+                                    <td>{{ $post->users['name']}}</td>
 
                                     <td>
                                         @if ($post->status == 1)
@@ -101,13 +99,13 @@
             <!-- Main row -->
 
             <!-- /.row -->
-    </div>
+         </div>
 
 
     <!-- /.content -->
     </section>
-    </div>
 
+</div>
 
 
 @section('script')
